@@ -44,19 +44,19 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 mt-10"
         >
-          <a
-            href="#contato"
+          <Link
+            to="/contato"
             className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg text-center hover:opacity-90 transition-opacity tracking-wide"
           >
             Solicitar Orçamento
-          </a>
-          <a
-            href="#containers"
+          </Link>
+          <Link
+            to="/containers"
             className="px-8 py-4 border border-border text-foreground font-semibold rounded-lg text-center hover:bg-secondary transition-colors tracking-wide flex items-center justify-center gap-2"
           >
             Ver Nossos Modelos
             <span>→</span>
-          </a>
+          </Link>
         </motion.div>
       </div>
 

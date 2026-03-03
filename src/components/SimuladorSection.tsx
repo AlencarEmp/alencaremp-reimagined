@@ -61,12 +61,12 @@ const SimuladorSection = () => {
           </p>
 
           <div className="mt-8 text-center">
-            <a
-              href="#contato"
+            <Link
+              to="/contato"
               className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg inline-block hover:opacity-90 transition-opacity"
             >
               Solicitar Análise Exata
-            </a>
+            </Link>
           </div>
         </div>
       </div>

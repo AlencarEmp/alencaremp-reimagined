@@ -156,12 +156,12 @@ const CreditoSection = () => {
           <p className="text-muted-foreground mb-8 leading-relaxed">
             Converse com a nossa diretoria. Exponha o seu projeto, mostre o seu veículo de retoma e vamos forjar um plano de pagamento que não destrua o seu fluxo de caixa.
           </p>
-          <a
-            href="#contato"
+          <Link
+            to="/contato"
             className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg inline-block hover:opacity-90 transition-opacity"
           >
             Simular Condições Agora
-          </a>
+          </Link>
         </div>
       </div>
     </section>

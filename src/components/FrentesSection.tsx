@@ -67,12 +67,12 @@ const FrentesSection = () => {
               </div>
               <h3 className="font-display text-xl font-semibold mb-3">{card.title}</h3>
               <p className="text-muted-foreground flex-1 leading-relaxed">{card.desc}</p>
-              <a
-                href={card.href}
+              <Link
+                to={card.href}
                 className="mt-6 text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
               >
                 {card.cta} →
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

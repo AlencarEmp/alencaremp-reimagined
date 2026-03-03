@@ -19,12 +19,12 @@ const FinanciamentoSection = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Transformamos o seu carro num ativo líquido. Avaliamos e aceitamos o seu veículo como entrada para o seu projeto modular. O saldo restante? Financiado diretamente pela Alencar, sem gerentes de banco a criar obstáculos.
             </p>
-            <a
-              href="#credito"
+            <Link
+              to="/credito"
               className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg inline-block hover:opacity-90 transition-opacity"
             >
               Entender o Processo
-            </a>
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}

@@ -28,9 +28,9 @@ const PortfolioSection = () => {
             <span className="section-badge mb-6 inline-block">Portfólio Resumido</span>
             <h2 className="font-display text-3xl md:text-5xl font-bold">Obras Entregues</h2>
           </div>
-          <a href="#containers" className="text-primary font-medium hover:underline">
+          <Link to="/containers" className="text-primary font-medium hover:underline">
             Ver Projetos Completos →
-          </a>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
