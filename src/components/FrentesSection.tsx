@@ -25,21 +25,6 @@ const cards = [
     href: "/credito",
   },
 ];
-  {
-    icon: Building2,
-    title: "Projetos Corporativos",
-    desc: "Escritórios, Lojas Pop-Up e Franquias. Expanda o seu negócio com uma arquitetura industrial chamativa.",
-    cta: "Ver Comercial",
-    href: "#corporativo",
-  },
-  {
-    icon: CreditCard,
-    title: "Crédito Próprio",
-    desc: "Não dependa de bancos. Financiamos o seu projeto e aceitamos o seu veículo como entrada.",
-    cta: "Ver Condições",
-    href: "#credito",
-  },
-];
 
 const FrentesSection = () => {
   return (
