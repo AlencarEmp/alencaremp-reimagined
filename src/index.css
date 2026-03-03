@@ -6,50 +6,44 @@
 
 @layer base {
   :root {
-    --background: 210 20% 6%;
-    --foreground: 0 0% 95%;
+    --background: 210 10% 5%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 18% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 210 10% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 18% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 210 10% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 160 40% 55%;
-    --primary-foreground: 210 20% 6%;
+    /* VERDE ALENCAR OFICIAL (Saturação aumentada para 42%) */
+    --primary: 162 42% 58%;
+    --primary-foreground: 210 10% 5%;
 
-    --secondary: 210 15% 15%;
+    --secondary: 210 10% 12%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 210 12% 18%;
-    --muted-foreground: 210 10% 55%;
+    --muted: 210 8% 15%;
+    --muted-foreground: 210 5% 65%;
 
-    --accent: 160 40% 55%;
-    --accent-foreground: 210 20% 6%;
+    --accent: 162 42% 58%;
+    --accent-foreground: 210 10% 5%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 12% 20%;
-    --input: 210 12% 20%;
-    --ring: 160 40% 55%;
+    --border: 210 10% 18%;
+    --input: 210 10% 18%;
+    --ring: 162 42% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --sidebar-background: 210 18% 8%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 160 40% 55%;
-    --sidebar-primary-foreground: 210 20% 6%;
-    --sidebar-accent: 210 12% 15%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 210 12% 18%;
-    --sidebar-ring: 160 40% 55%;
-
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(160 40% 55%), hsl(160 50% 40%));
-    --gradient-dark: linear-gradient(180deg, hsl(210 20% 6%), hsl(210 18% 10%));
-    --shadow-glow: 0 0 40px hsl(160 40% 55% / 0.15);
-    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
+    /* Tokens de Design com Saturação Calibrada */
+    --gradient-primary: linear-gradient(135deg, hsl(162 42% 58%), hsl(162 45% 35%));
+    --gradient-dark: linear-gradient(180deg, hsl(210 10% 5%), hsl(210 10% 8%));
+    
+    /* Glow agora mais perceptível devido à saturação */
+    --shadow-glow: 0 0 40px hsl(162 42% 58% / 0.18);
+    --shadow-card: 0 10px 30px -5px hsl(0 0% 0% / 0.5);
   }
 }
 
@@ -59,11 +53,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30;
     font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tighter;
     font-family: 'Space Grotesk', sans-serif;
   }
 
@@ -75,30 +70,38 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(160 40% 55%), hsl(160 60% 70%));
+    /* Degradê que transita do verde saturado para um tom mais mentolado */
+    background-image: linear-gradient(135deg, hsl(162 42% 58%), hsl(162 35% 75%));
   }
 
   .section-badge {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase border border-border text-muted-foreground;
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] font-black tracking-[0.2em] uppercase border border-primary/40 text-primary bg-primary/10 backdrop-blur-md;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.15);
   }
 
   .glass-card {
-    @apply bg-card/60 backdrop-blur-md border border-border rounded-xl;
+    @apply bg-card/40 backdrop-blur-xl border border-white/5 rounded-2xl transition-all duration-500;
     box-shadow: var(--shadow-card);
+  }
+
+  .bg-grid {
+    background-image: radial-gradient(hsl(var(--primary) / 0.2) 1px, transparent 1px);
+    background-size: 30px 30px;
   }
 }
 
-/* Custom scrollbar */
+/* Scrollbar Ajustada */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(210 20% 6%);
+  background: hsl(210 10% 5%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(210 12% 25%);
-  border-radius: 3px;
+  background: hsl(210 10% 15%);
+  border-radius: 10px;
+  border: 2px solid hsl(210 10% 5%);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(160 40% 55%);
+  background: hsl(162 42% 58%);
 }
