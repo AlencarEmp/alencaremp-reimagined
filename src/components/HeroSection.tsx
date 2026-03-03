@@ -99,6 +99,7 @@ const HeroSection = () => {
                 <div className="text-sm text-muted-foreground mt-1 tracking-wide uppercase">
                   {stat.label}
                 </div>
+                <div className="w-12 h-0.5 bg-primary/50 mx-auto mt-3 rounded-full" />
               </motion.div>
             ))}
           </div>
