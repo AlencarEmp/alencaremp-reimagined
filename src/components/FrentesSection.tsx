@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Home, Building2, CreditCard } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -7,8 +8,23 @@ const cards = [
     title: "Habitação Modular",
     desc: "Projetos residenciais em aço naval. Desde estúdios compactos a mansões acopladas de alto luxo.",
     cta: "Ver Residências",
-    href: "#containers",
+    href: "/containers",
   },
+  {
+    icon: Building2,
+    title: "Projetos Corporativos",
+    desc: "Escritórios, Lojas Pop-Up e Franquias. Expanda o seu negócio com uma arquitetura industrial chamativa.",
+    cta: "Ver Comercial",
+    href: "/containers",
+  },
+  {
+    icon: CreditCard,
+    title: "Crédito Próprio",
+    desc: "Não dependa de bancos. Financiamos o seu projeto e aceitamos o seu veículo como entrada.",
+    cta: "Ver Condições",
+    href: "/credito",
+  },
+];
   {
     icon: Building2,
     title: "Projetos Corporativos",
