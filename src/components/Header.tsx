@@ -51,20 +51,20 @@ const Header = () => {
           />
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - RESTAURADO PARA TEXT-SM */}
         <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[10px] font-black text-muted-foreground hover:text-primary transition-colors tracking-[0.2em] uppercase"
+              className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase"
             >
               {item.label}
             </a>
           ))}
           <a
             href="#contato"
-            className="px-6 py-3 bg-primary text-primary-foreground text-[10px] font-black rounded-xl hover:shadow-[0_10px_30px_rgba(var(--primary),0.4)] hover:scale-105 transition-all uppercase tracking-[0.2em]"
+            className="px-6 py-3 bg-primary text-primary-foreground text-sm font-bold rounded-xl hover:shadow-[0_10px_30px_rgba(var(--primary),0.4)] hover:scale-105 transition-all uppercase tracking-wide"
           >
             FALE CONOSCO
           </a>
