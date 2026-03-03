@@ -80,12 +80,12 @@ const ContainersSection = () => {
                   <div className="text-xs text-muted-foreground">A partir de</div>
                   <div className="font-display text-2xl font-bold text-primary">{m.price}</div>
                 </div>
-                <a
-                  href="#contato"
+                <Link
+                  to="/contato"
                   className="mt-4 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-center text-sm hover:opacity-90 transition-opacity"
                 >
                   Saber Mais
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
