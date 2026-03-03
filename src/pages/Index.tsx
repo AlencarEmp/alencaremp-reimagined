@@ -1,12 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import FrentesSection from "@/components/FrentesSection";
+import PorqueContainersSection from "@/components/PorqueContainersSection";
+import FinanciamentoSection from "@/components/FinanciamentoSection";
+import ProcessoSection from "@/components/ProcessoSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import SimuladorSection from "@/components/SimuladorSection";
+import DepoimentosSection from "@/components/DepoimentosSection";
+import TecnologiasSection from "@/components/TecnologiasSection";
+import FAQSection from "@/components/FAQSection";
+import ContainersSection from "@/components/ContainersSection";
+import CreditoSection from "@/components/CreditoSection";
+import SobreSection from "@/components/SobreSection";
+import ContatoSection from "@/components/ContatoSection";
+import PoliticaSection from "@/components/PoliticaSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <FrentesSection />
+        <PorqueContainersSection />
+        <FinanciamentoSection />
+        <ProcessoSection />
+        <PortfolioSection />
+        <SimuladorSection />
+        <DepoimentosSection />
+        <TecnologiasSection />
+        <FAQSection />
+        <ContainersSection />
+        <CreditoSection />
+        <SobreSection />
+        <ContatoSection />
+        <PoliticaSection />
+      </main>
+      <Footer />
     </div>
   );
 };
