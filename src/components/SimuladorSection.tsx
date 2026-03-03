@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const SimuladorSection = () => {
   const [area, setArea] = useState(80);
@@ -61,12 +60,12 @@ const SimuladorSection = () => {
           </p>
 
           <div className="mt-8 text-center">
-            <Link
-              to="/contato"
+            <a
+              href="#contato"
               className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg inline-block hover:opacity-90 transition-opacity"
             >
               Solicitar Análise Exata
-            </Link>
+            </a>
           </div>
         </div>
       </div>

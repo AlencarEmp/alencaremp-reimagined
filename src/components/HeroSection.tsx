@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-containers.jpg";
 
 const HeroSection = () => {
@@ -44,19 +43,19 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 mt-10"
         >
-          <Link
-            to="/contato"
+          <a
+            href="#contato"
             className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg text-center hover:opacity-90 transition-opacity tracking-wide"
           >
             Solicitar Orçamento
-          </Link>
-          <Link
-            to="/containers"
+          </a>
+          <a
+            href="#containers"
             className="px-8 py-4 border border-border text-foreground font-semibold rounded-lg text-center hover:bg-secondary transition-colors tracking-wide flex items-center justify-center gap-2"
           >
             Ver Nossos Modelos
             <span>→</span>
-          </Link>
+          </a>
         </motion.div>
       </div>
 
@@ -100,7 +99,6 @@ const HeroSection = () => {
                 <div className="text-sm text-muted-foreground mt-1 tracking-wide uppercase">
                   {stat.label}
                 </div>
-                <div className="w-12 h-0.5 bg-primary/50 mx-auto mt-3 rounded-full" />
               </motion.div>
             ))}
           </div>

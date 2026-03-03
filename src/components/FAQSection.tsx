@@ -39,6 +39,12 @@ const FAQSection = () => {
           ))}
         </Accordion>
 
+        <div className="mt-16 glass-card p-8 text-center">
+          <h3 className="font-display text-xl font-semibold mb-2">Garantia Estrutural de 10 Anos</h3>
+          <p className="text-muted-foreground">
+            | Em todos os projetos executados pela Alencar Empreendimentos.
+          </p>
+        </div>
       </div>
     </section>
   );

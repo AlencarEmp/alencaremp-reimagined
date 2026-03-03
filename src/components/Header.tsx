@@ -1,48 +1,41 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "INÍCIO", href: "/" },
-  { label: "CONTAINERS", href: "/containers" },
-  { label: "CRÉDITO PRÓPRIO", href: "/credito" },
-  { label: "SOBRE NÓS", href: "/sobre" },
-  { label: "FAQ", href: "/faq" },
+  { label: "INÍCIO", href: "#inicio" },
+  { label: "CONTAINERS", href: "#containers" },
+  { label: "CRÉDITO PRÓPRIO", href: "#credito" },
+  { label: "SOBRE NÓS", href: "#sobre" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="font-display text-xl font-bold tracking-tight text-foreground">
+        <a href="#inicio" className="font-display text-xl font-bold tracking-tight text-foreground">
           ALENCAR<span className="text-primary"> Empreendimentos</span>
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.href}
-              to={item.href}
-              className={`text-sm font-medium transition-colors tracking-wide ${
-                location.pathname === item.href
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+              href={item.href}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="/contato"
+          <a
+            href="#contato"
             className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity"
           >
             FALE CONOSCO
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile toggle */}
@@ -66,22 +59,22 @@ const Header = () => {
           >
             <nav className="flex flex-col items-center justify-center gap-8 pt-20">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.href}
-                  to={item.href}
+                  href={item.href}
                   onClick={() => setIsOpen(false)}
                   className="text-2xl font-display font-semibold text-foreground hover:text-primary transition-colors"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
-              <Link
-                to="/contato"
+              <a
+                href="#contato"
                 onClick={() => setIsOpen(false)}
                 className="mt-4 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg text-lg"
               >
                 FALE CONOSCO
-              </Link>
+              </a>
             </nav>
           </motion.div>
         )}
