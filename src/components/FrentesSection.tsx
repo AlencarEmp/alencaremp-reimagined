@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Home, Building2, CreditCard } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -7,21 +8,21 @@ const cards = [
     title: "Habitação Modular",
     desc: "Projetos residenciais em aço naval. Desde estúdios compactos a mansões acopladas de alto luxo.",
     cta: "Ver Residências",
-    href: "#containers",
+    href: "/containers",
   },
   {
     icon: Building2,
     title: "Projetos Corporativos",
     desc: "Escritórios, Lojas Pop-Up e Franquias. Expanda o seu negócio com uma arquitetura industrial chamativa.",
     cta: "Ver Comercial",
-    href: "#corporativo",
+    href: "/containers",
   },
   {
     icon: CreditCard,
     title: "Crédito Próprio",
     desc: "Não dependa de bancos. Financiamos o seu projeto e aceitamos o seu veículo como entrada.",
     cta: "Ver Condições",
-    href: "#credito",
+    href: "/credito",
   },
 ];
 
@@ -51,12 +52,12 @@ const FrentesSection = () => {
               </div>
               <h3 className="font-display text-xl font-semibold mb-3">{card.title}</h3>
               <p className="text-muted-foreground flex-1 leading-relaxed">{card.desc}</p>
-              <a
-                href={card.href}
+              <Link
+                to={card.href}
                 className="mt-6 text-primary font-medium hover:underline inline-flex items-center gap-1 text-sm"
               >
                 {card.cta} →
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

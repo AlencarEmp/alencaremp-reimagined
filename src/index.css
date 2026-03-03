@@ -80,12 +80,27 @@
 
   .section-badge {
     @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase border border-border text-muted-foreground;
+    background: linear-gradient(
+      110deg,
+      transparent 20%,
+      hsl(160 40% 55% / 0.15) 40%,
+      hsl(160 40% 55% / 0.3) 50%,
+      hsl(160 40% 55% / 0.15) 60%,
+      transparent 80%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
   }
 
   .glass-card {
     @apply bg-card/60 backdrop-blur-md border border-border rounded-xl;
     box-shadow: var(--shadow-card);
   }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* Custom scrollbar */
